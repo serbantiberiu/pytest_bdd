@@ -3,9 +3,7 @@ Feature: Check if i can Login
   I want to introduce user and password,
   So i can login
 
-  Scenario: Login succesfully
+  Scenario: Login successfully
     Given Open LoginPage
-    When Introduce user
-    When Introduce password
-    When Click Login button
-    Then Login succesfully
+    When The user inserts credentials and clicks login button
+    Then Login is successful

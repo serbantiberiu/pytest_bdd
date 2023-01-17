@@ -1,13 +1,12 @@
-from time import sleep
-from BDD_POM.Locators.Locators import HomepageLocators
+from BDD_POM.locators.Locators import HomepageLocators
+
 
 class Homepage:
-    def __init__(self,browser):
+    def __init__(self, browser):
         self.browser = browser
 
-    def load_page(self):
+    def load_home_page(self):
         self.browser.get(HomepageLocators.URL)
-        sleep(3)
 
     def click_elements(self, button):
         if button == "Checkboxes":
@@ -25,7 +24,3 @@ class Homepage:
         elif button == "Inputs":
             self.browser.find_element(*HomepageLocators.inputs).click()
             print("\nClick!")
-
-
-
-
